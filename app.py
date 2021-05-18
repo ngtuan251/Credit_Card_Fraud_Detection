@@ -56,17 +56,17 @@ selected_model = st.selectbox('Model: ',
                      'Decision Tree Classifier', 'Gaussian Naive Bayes', 'Support Vector Machine'])
 
 if selected_model == 'Logistic Regression':
-    model = pickle.load(open('credit_lr.pkl', 'rb'))
+    model = pickle.load(open('./Models/credit_lr.pkl', 'rb'))
 elif selected_model == 'Linear Discriminant Analysis':
-    model = pickle.load(open('credit_lda.pkl', 'rb'))
+    model = pickle.load(open('./Models/credit_lda.pkl', 'rb'))
 elif selected_model == 'K Nearest Neighbors':
-    model = pickle.load(open('credit_knn.pkl', 'rb'))
+    model = pickle.load(open('./Models/credit_knn.pkl', 'rb'))
 elif selected_model == 'Decision Tree Classifier':
-    model = pickle.load(open('credit_clf.pkl', 'rb'))
+    model = pickle.load(open('./Models/credit_clf.pkl', 'rb'))
 elif selected_model == 'Gaussian Naive Bayes':
-    model = pickle.load(open('credit_nb.pkl', 'rb'))
+    model = pickle.load(open('./Models/credit_nb.pkl', 'rb'))
 elif selected_model == 'Support Vector Machine':
-    model = pickle.load(open('credit_svm.pkl', 'rb'))
+    model = pickle.load(open('./Models/credit_svm.pkl', 'rb'))
             
 
 
@@ -92,37 +92,37 @@ def show_evaluation():
             st.write('**Logistic Regression** is a Machine Learning classification algorithm that is used to predict the probability of a categorical dependent variable. In logistic regression, the dependent variable is a binary variable that contains data coded as 1 or 0. In other words, the logistic regression model predicts P(Y=1) as a function of X.')
             st.write('**The model is evaluated on a test set randomly selected from 20% of the entire dataset.*')
             st.write('**Recall Score:** 0.55')
-            image = Image.open('LR.png')
+            image = Image.open('./Images/LR.png')
             st.image(image, use_column_width=False)
         elif selected_model == 'Linear Discriminant Analysis':
             st.write('**Linear Discriminant Analysis** is a dimensionality reduction technique which is commonly used for the supervised classification problems. It is used for modeling differences in groups i.e. separating two or more classes. It is used to project the features in higher dimension space into a lower dimension space.') 
             st.write('**The model is evaluated on a test set randomly selected from 20% of the entire dataset.*')
             st.write('**Recall Score:** 0.73')
-            image = Image.open('LDA.png')
+            image = Image.open('./Images/LDA.png')
             st.image(image, use_column_width=False)
         elif selected_model == 'K Nearest Neighbors':
             st.write('**K-Nearest Neighbors** is a non-parametric method used for classification and regression. In K-NN classification, the output is a class membership. This algorithm relies on distance and an object is classified by a plurality vote of its neighbors (the least distances), with the object being assigned to the class most common among its k nearest neighbors.')
             st.write('**The model is evaluated on a test set randomly selected from 20% of the entire dataset.*')
             st.write('**Recall Score:** 0.78')
-            image = Image.open('KNN.png')
+            image = Image.open('./Images/KNN.png')
             st.image(image, use_column_width=False)
         elif selected_model == 'Decision Tree Classifier':
             st.write('**Decision Tree Classifier** is a type of Supervised Machine Learning method where the data is continuously split according to a certain parameter. The tree can be explained by two entities, namely decision nodes and leaves. The leaves are the decisions or the final outcomes. And the decision nodes are where the data is split.')
             st.write('**The model is evaluated on a test set randomly selected from 20% of the entire dataset.*')
             st.write('**Recall Score:** 0.71')
-            image = Image.open('CART.png')
+            image = Image.open('./Images/CART.png')
             st.image(image, use_column_width=False)
         elif selected_model == 'Gaussian Naive Bayes':
             st.write('**Gaussian Naive Bayes** is a Machine Learning algorithm in which continuous values associated with each feature are assumed to be distributed according to a Gaussian distribution. A Gaussian distribution is also called Normal distribution.')
             st.write('**The model is evaluated on a test set randomly selected from 20% of the entire dataset.*')
             st.write('**Recall Score:** 0.75')
-            image = Image.open('NB.png')
+            image = Image.open('./Images/NB.png')
             st.image(image, use_column_width=False)
         elif selected_model == 'Support Vector Machine':
             st.write('**Support Vector Machine (SVM)** constructs a hyperplane or set of hyperplanes in a high- or infinite-dimensional space, which can be used for classification, regression, or other tasks like outliers detection. Intuitively, a good separation is achieved by the hyperplane that has the largest distance to the nearest training-data point of any class (functional margin).')
             st.write('**The model is evaluated on a test set randomly selected from 20% of the entire dataset.*')
             st.write('**Recall Score:** 0.64')
-            image = Image.open('SVM.png')
+            image = Image.open('./Images/SVM.png')
             st.image(image, use_column_width=False)    
 
 show_evaluation()
